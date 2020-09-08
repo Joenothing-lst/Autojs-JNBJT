@@ -1,14 +1,14 @@
 var SIZE = [1080, 2248]; //手机尺寸
 var REBACK = [140, 140]; //无效点
 var BLOCKSTART = [172, 1075]; //拼图左上标
-var HALFBLOCK = 62; //拼图边长的一半
-var SLEEP = 500; //休眠 ms
-var MINS = 3; //循环用时 min
-var DELAY = 5; //循环延迟 s
-var WARN = 5; //提醒时间 s
+var HALFBLOCK = 62; //拼图边长的一半，一般不用动
+var SLEEP = 500; //休眠（ms），一般不用动
+var MINS = 3; //循环用时（min）
+var DELAY = 5; //循环延迟（s）
+var WARN = 5; //提醒时间（s）
 var PLAYING = true; //挂机模式
 var TASKS = [
-    [x, y],//水井坐标
+    [x, y],//改为水井坐标
 ];
 
 
