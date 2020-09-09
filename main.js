@@ -1,5 +1,5 @@
 var SIZE = [1080, 2248]; //手机尺寸
-var REBACK = [140, 140]; //无效点
+var REBACK = [140, 140]; //无效点，地图上一个没有建筑的点，用于退出操作
 var BLOCKSTART = [172, 1075]; //拼图左上标
 var HALFBLOCK = 62; //拼图边长的一半，一般不用动
 var SLEEP = 500; //休眠（ms），一般不用动
@@ -10,6 +10,11 @@ var PLAYING = true; //挂机模式
 var TASKS = [
     [x, y],//改为水井坐标
 ];
+
+
+function clickJing(i,j){
+    click(540+i*55, 1100+j*55)
+}
 
 
 function reBack() {
@@ -89,6 +94,7 @@ function main(task) {
     var spflag = true;
     sptemp = images.read("./defult/sp.jpg");
     for (var i in task) {
+        //clickJing(task[i][0], task[i][1]);
         click(task[i][0], task[i][1]);
         work(spflag);
     }
@@ -101,7 +107,7 @@ function main(task) {
 
 images.requestScreenCapture();
 launchApp("江南百景图");
-sleep(SLEEP * 4);
+sleep(2000);
 main(TASKS);
 
 setInterval(function () {
