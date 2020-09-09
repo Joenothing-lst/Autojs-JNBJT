@@ -1,12 +1,15 @@
-var SIZE = [1080, 2248]; //手机尺寸
-var REBACK = [140, 140]; //无效点，地图上一个没有建筑的点，用于退出操作
-var BLOCKSTART = [172, 1075]; //拼图左上标
-var HALFBLOCK = 62; //拼图边长的一半，一般不用动
-var SLEEP = 500; //休眠（ms），一般不用动
-var MINS = 3; //循环用时（min）
-var DELAY = 5; //循环延迟（s）
-var WARN = 5; //提醒时间（s）
-var PLAYING = true; //挂机模式
+var SIZE = [1080, 2248]; // 手机尺寸
+var REBACK = [140, 140]; // 无效点，地图上一个没有建筑的点，用于返回操作
+var BLOCKSTART = [172, 1075]; // 拼图左上标
+var HALFBLOCK = 62; // 拼图边长的一半，一般不用动
+var SLEEP = 500; // 休眠（ms），一般不用动
+var MINS = 3; // 循环用时（min）
+var DELAY = 5; // 循环延迟（s）
+var WARN = 5; // 提醒时间（s）
+var PLAYING = true; /* 挂机模式，true代表开启，false代表关闭，
+                       关闭后每运行一次循环时都会自动返回桌面，此时您可以用手机干别的事情，
+                       直到提示循环的下一次执行，会自动打开江南百景图app。
+                       挂机模式仅建议1级井使用，因为5级井循环用时是一分半，基本干不了什么事。*/
 var TASKS = [
     [x, y],//改为水井坐标
 ];
