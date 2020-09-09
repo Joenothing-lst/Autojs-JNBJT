@@ -1,5 +1,7 @@
 # Autojs-JNBJT
-基于[Auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)框架编写的用于持久化挂机的脚本。  
+基于[Auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)框架编写的用于江南百景图（~~江南百井图~~）持久化挂机的脚本。  
+
+## ----- 本代码仅供学习和参考使用，禁止任何利用此脚本的牟利行为 -----
 
 ## 优点
 + 无需root；  
