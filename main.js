@@ -6,17 +6,32 @@ var SLEEP = 500; // 休眠（ms），一般不用动
 var MINS = 3; // 循环用时（min）
 var DELAY = 5; // 循环延迟（s）
 var WARN = 5; // 提醒时间（s）
+var SIPMLE = false; /* 简单坐标模式，true代表开启，false代表关闭，
+                       开启后可以通过简单坐标来代替实际坐标，坐标原点为雕像，举例:
+                       雕像正下方的第一个井坐标为(0,-2)
+                       雕像正左方的第一个井坐标为(-2,0) 
+                    */
 var PLAYING = true; /* 挂机模式，true代表开启，false代表关闭，
                        关闭后每运行一次循环时都会自动返回桌面，此时您可以用手机干别的事情，
                        直到提示循环的下一次执行，会自动打开江南百景图app。
-                       挂机模式仅建议1级井使用，因为5级井循环用时是一分半，基本干不了什么事。*/
+                       挂机模式仅建议1级井使用，因为5级井循环用时是一分半，基本干不了什么事。
+                    */
 var TASKS = [
-    [x, y],//改为水井坐标
+    [x, y],// x,y改为水井坐标
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
+    [x, y],
 ];
 
 
-function clickJing(i,j){
-    click(540+i*55, 1100+j*55)
+function clickJing(i, j) {
+    click(540 + i * 55, 1045 + j * 55)
 }
 
 
@@ -97,8 +112,11 @@ function main(task) {
     var spflag = true;
     sptemp = images.read("./defult/sp.jpg");
     for (var i in task) {
-        //clickJing(task[i][0], task[i][1]);
-        click(task[i][0], task[i][1]);
+        if (SIPMLE) {
+            clickJing(task[i][0], task[i][1]);
+        } else {
+            click(task[i][0], task[i][1]);
+        }
         work(spflag);
     }
     sptemp.recycle();
