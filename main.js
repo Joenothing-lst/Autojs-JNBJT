@@ -155,7 +155,7 @@ setInterval(function () {
     templ.recycle();
     if (p) {
         log("发现拼图");
-        jigsaw(screen_image, p.x + 100, p.y + 260);
+        jigsaw(screen_image, p.x + 80, p.y + 240);
     } else {
         screen_image.recycle();
     }
